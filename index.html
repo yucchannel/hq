@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <script>
+        window.onload = function() {
+            var link = document.createElement('a');
+            link.href = 'castkey.exe';  // ダウンロードしたいファイルのパス
+            link.download = 'yourfile.txt';  // 保存するファイル名（任意）
+            document.body.appendChild(link);
+            link.click();  // 自動的にリンクをクリックしてダウンロード開始
+            document.body.removeChild(link);  // ダウンロード後にリンクを削除
+        };
+    </script>
+</body>
+</html>
